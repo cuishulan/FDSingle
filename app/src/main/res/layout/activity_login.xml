@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#238E68"
+    tools:context="com.bjfdpackage.singleActivity.LoginActivity">
+    <TextView
+        android:id="@+id/login_rester"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="注册"
+        android:textColor="#BC1717 "
+        android:padding="@dimen/dp_3"
+        android:textSize="@dimen/dp_20"
+        android:layout_alignParentRight="true"
+        />
+    <ImageView
+        android:layout_marginBottom="@dimen/dp_30"
+        android:layout_width="@dimen/dp_80"
+        android:layout_height="@dimen/dp_80"
+        android:layout_centerHorizontal="true"
+      android:layout_above="@+id/login_usename"
+        android:src="@drawable/icon_run"/>
+
+    <EditText
+        android:lines="1"
+        android:inputType="text"
+        android:id="@+id/login_usename"
+        android:layout_centerInParent="true"
+        android:hint="请输入用户名"
+        android:background="@drawable/bg_bk"
+        android:layout_width="@dimen/dp_300"
+        android:layout_height="@dimen/dp_30"
+        android:layout_gravity="center"/>
+    <EditText
+        android:lines="1"
+        android:inputType="text"
+        android:layout_below="@+id/login_usename"
+        android:layout_marginTop="@dimen/dp_20"
+        android:hint="请输入密码"
+        android:id="@+id/login_usepassword"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/bg_bk"
+        android:layout_width="@dimen/dp_300"
+        android:layout_height="@dimen/dp_30" />
+    <Button
+        android:layout_below="@+id/login_usepassword"
+        android:id="@+id/login"
+        android:layout_width="@dimen/dp_200"
+        android:text="登录"
+        android:layout_marginTop="@dimen/dp_20"
+        android:background="@drawable/bg_bk"
+        android:layout_centerHorizontal="true"
+        android:layout_height="@dimen/dp_35" />
+    <TextView
+        android:layout_below="@+id/login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+   android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dp_10"
+        android:textColor="#871F78"
+        android:text="忘记密码"/>
+</RelativeLayout>

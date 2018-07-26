@@ -1,13 +1,60 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/mdrawerLayout"
+    android:background="#238E68"
     tools:context="com.bjfdpackage.MainActivity">
-    <TextView
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:text="你好"
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="档案库"
+    android:layout_centerHorizontal="true"
+    android:background="#D9D919 "
+    android:textSize="@dimen/dp_25"
+    android:textColor="#f00"
     />
-
-</LinearLayout>
+    <RelativeLayout android:id="@+id/main_in"
+      android:layout_centerVertical="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+       <!--放入库坏人出库的两张图片-->
+        <ImageView
+            android:id="@+id/main_ruku"
+            android:layout_marginLeft="@dimen/dp_20"
+            android:layout_width="@dimen/dp_80"
+            android:layout_height="@dimen/dp_80"
+            android:layout_marginRight="@dimen/dp_5"
+            android:src="@drawable/shop_in"/>
+        <TextView
+            android:layout_below="@id/main_ruku"
+            android:textSize="@dimen/dp_20"
+            android:textColor="#f00"
+            android:layout_alignLeft="@id/main_ruku"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="档案入库"/>
+    </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/main_on"
+            android:layout_width="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/main_chuku"
+                android:layout_marginRight="@dimen/dp_20"
+                android:layout_width="@dimen/dp_80"
+                android:layout_height="@dimen/dp_80"
+                android:src="@drawable/shop_on"/>
+            <TextView
+                android:layout_below="@id/main_chuku"
+                android:textSize="@dimen/dp_20"
+                android:textColor="#f00"
+                android:layout_alignLeft="@id/main_chuku"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="档案出库"/>
+        </RelativeLayout>
+</RelativeLayout>

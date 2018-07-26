@@ -7,6 +7,8 @@ import android.os.Handler;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.view.WindowManager;
+import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.VideoView;
 
 import com.bjfdpackage.MainActivity;
@@ -20,14 +22,25 @@ import butterknife.ButterKnife;
  */
 
 public class StartActivity extends AppCompatActivity {
+
+
     @Bind(R.id.vodioView)
     VideoView vodioView;
+    @Bind(R.id.splash_iv)
+    ImageView splashIv;
+    @Bind(R.id.spash_tv_english)
+    TextView spashTvEnglish;
+    @Bind(R.id.spash_tv_bottom)
+    TextView spashTvBottom;
+    @Bind(R.id.textView)
+    TextView textView;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_start);
         ButterKnife.bind(this);
-      getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         vodioView = (VideoView) findViewById(R.id.vodioView);  //视频播放器  控件
         String videoPath = Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.landing).toString(); //视频路径  加载本地 视频
         vodioView.setVideoPath(videoPath);
@@ -36,7 +49,7 @@ public class StartActivity extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent intent = new Intent(StartActivity.this, MainActivity.class);
+                Intent intent = new Intent(StartActivity.this, LoginActivity.class);
                 startActivity(intent);
 //                在startActivity后，调用overridePendingTransition方法，例如，实现淡入淡出的效果如下
                 overridePendingTransition(R.anim.in, R.anim.out);

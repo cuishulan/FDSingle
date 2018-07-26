@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.bjfdpackage.singleActivity.StoragemanagementAcivity">
+<TextView
+    android:background="#D9D919"
+    android:layout_width="wrap_content"
+    android:text="入库管理系统"
+    android:layout_centerHorizontal="true"
+    android:textSize="25dp"
+    android:textColor="#f00"
+    android:layout_height="wrap_content" />
+
+    <!--我们需要把档案存入档案库:id,姓名，书籍，日期
+
+    -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</RelativeLayout>

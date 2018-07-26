@@ -8,18 +8,21 @@
         android:label="@string/app_name"
         android:roundIcon="@drawable/icon_run"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme.NoActionBar">
 
-        <!--  启动 入口-->
+        <!-- 启动 入口 -->
         <activity android:name=".singleActivity.StartActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity"/>
-
+        <activity android:name=".MainActivity" />
+        <activity android:name=".singleActivity.LoginActivity" />
+        <activity android:name=".singleActivity.RegsterAcivity" />
+        <activity android:name=".singleActivity.StoragemanagementAcivity" />
+        <activity android:name=".singleActivity.WarehousemanagementAcivity"></activity>
     </application>
-
 
 </manifest>
